@@ -4,15 +4,33 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>App %QAP</title>
+    <title>QAP | Web App</title>
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    <script src="./script.js"></script>
     <main>
+      <header>
+        <h1>Geo Toolbox | QAP</h1>
+        <p>
+          App para recalcular porcentaje de minerales observados y clasificar
+          rocas
+        </p>
+      </header>
       <section>
-        <h1>Esta es la primera piedra de mi proyecto QAP</h1>
-        <p>and is so maraviwonderful!</p>
-        <p>esto lo estoy haciendo en la rama de development</p>
+        <h2>% QAP</h2>
+        <p>Ingresa el porcentaje QAP observado en la muestra</p>
+        <form action="">
+          <label for="InputCuarzo">Cuarzo</label>
+          <input id="InputCuarzo" type="number" />
+          <button type="button" onclick="//">Recalcular QAP</button>
+          <button type="button" onclick="calcularAreaCuadrado()">
+            Calcular Área
+          </button>
+
+          <p id="ResultadoPerimetro"></p>
+          <p id="ResultadoArea"></p>
+        </form>
       </section>
     </main>
   </body>
