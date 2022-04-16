@@ -11,3 +11,58 @@
 
 // v.3 que se grafique y pueda exportar la posición exacta de la muestra en el diagrama
 // v.4 que se puedan graficar varias muestras y exportar
+
+//NOTES.
+//Agregar validaciones
+//- En caso de ingresar un porcentaje cuya suma es mayor a 100%
+
+const cuarzo = 25;
+const feldespatoK = 30;
+const plagioclasa = 35;
+
+// const sumaQAP = cuarzo + feldespatoK + plagioclasa;
+// console.log(sumaQAP);
+
+// const recalcularQ = (cuarzo * 100) / sumaQAP;
+// console.log(recalcularQ);
+
+// const recalcularA = (feldespatoK * 100) / sumaQAP;
+// console.log(recalcularA);
+
+// const recalcularP = (plagioclasa * 100) / sumaQAP;
+// console.log(recalcularP);
+
+// const newQAP = recalcularQ + recalcularA + recalcularP;
+// console.log(newQAP);
+
+//Funciones
+function sumaQAP(cuarzo, feldespatoK, plagioclasa) {
+  const sumaQAP = cuarzo + feldespatoK + plagioclasa;
+  return sumaQAP;
+}
+
+function recalcularQ(cuarzo, feldespatoK, plagioclasa) {
+  const recalcularQ =
+    (cuarzo * 100) / sumaQAP(cuarzo, feldespatoK, plagioclasa);
+  return recalcularQ;
+}
+
+function recalcularA(cuarzo, feldespatoK, plagioclasa) {
+  const recalcularA =
+    (feldespatoK * 100) / sumaQAP(cuarzo, feldespatoK, plagioclasa);
+  return recalcularA;
+}
+
+function recalcularP(cuarzo, feldespatoK, plagioclasa) {
+  const recalcularP =
+    (plagioclasa * 100) / sumaQAP(cuarzo, feldespatoK, plagioclasa);
+  return recalcularP;
+}
+
+// function (cuarzo, feldespatoK, plagioclasa) {
+// const sumaQAP = cuarzo + feldespatoK + plagioclasa
+
+// }
+
+//Interactuando con HTML
+//
