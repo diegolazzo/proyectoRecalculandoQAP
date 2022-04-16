@@ -13,12 +13,12 @@
       <h1>Geo Toolbox | QAP</h1>
       <p>
         App para recalcular porcentaje de minerales observados y clasificar
-        rocas
+        rocas a la velocidad de la luz
       </p>
     </header>
     <main>
-      <section>
-        <h2>% QAP</h2>
+      <section class="containerQAP">
+        <h2 class="title">% QAP</h2>
         <p>Ingresa el porcentaje QAP observado en la muestra</p>
         <form action="">
           <label for="InputCuarzo">Cuarzo</label>
@@ -37,6 +37,11 @@
           <p id="ResultadoQ"></p>
           <p id="ResultadoA"></p>
           <p id="ResultadoP"></p>
+
+          <p class="disclaimer">
+            Disclaimer: "garbage in, garbage out". Si ingresas datos erróneos,
+            la clasificación de tu muestra también será errónea.
+          </p>
         </form>
       </section>
     </main>
