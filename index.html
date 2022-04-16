@@ -23,13 +23,20 @@
         <form action="">
           <label for="InputCuarzo">Cuarzo</label>
           <input id="InputCuarzo" type="number" />
-          <button type="button" onclick="//">Recalcular QAP</button>
-          <button type="button" onclick="calcularAreaCuadrado()">
-            Calcular Área
+
+          <label for="InputFeldespatoK">Feldespato K</label>
+          <input id="InputFeldespatoK" type="number" />
+
+          <label for="InputPlagioclasa">Plagioclasa</label>
+          <input id="InputPlagioclasa" type="number" />
+
+          <button type="button" onclick="recalcularQAP()">
+            Recalcular QAP
           </button>
 
-          <p id="ResultadoPerimetro"></p>
-          <p id="ResultadoArea"></p>
+          <p id="ResultadoQ"></p>
+          <p id="ResultadoA"></p>
+          <p id="ResultadoP"></p>
         </form>
       </section>
     </main>

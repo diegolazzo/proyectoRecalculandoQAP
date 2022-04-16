@@ -16,9 +16,7 @@
 //Agregar validaciones
 //- En caso de ingresar un porcentaje cuya suma es mayor a 100%
 
-const cuarzo = 25;
-const feldespatoK = 30;
-const plagioclasa = 35;
+//Aproximar resultados a 1 decimal a un entero más cercano
 
 // const sumaQAP = cuarzo + feldespatoK + plagioclasa;
 // console.log(sumaQAP);
@@ -42,27 +40,65 @@ function sumaQAP(cuarzo, feldespatoK, plagioclasa) {
 }
 
 function recalcularQ(cuarzo, feldespatoK, plagioclasa) {
-  const recalcularQ =
-    (cuarzo * 100) / sumaQAP(cuarzo, feldespatoK, plagioclasa);
+  let recalcularQ = (cuarzo * 100) / sumaQAP(cuarzo, feldespatoK, plagioclasa);
+  recalcularQ = Math.round(recalcularQ);
   return recalcularQ;
 }
 
 function recalcularA(cuarzo, feldespatoK, plagioclasa) {
-  const recalcularA =
+  let recalcularA =
     (feldespatoK * 100) / sumaQAP(cuarzo, feldespatoK, plagioclasa);
+  recalcularA = Math.round(recalcularA);
+
   return recalcularA;
 }
 
 function recalcularP(cuarzo, feldespatoK, plagioclasa) {
-  const recalcularP =
+  let recalcularP =
     (plagioclasa * 100) / sumaQAP(cuarzo, feldespatoK, plagioclasa);
+  recalcularP = Math.round(recalcularP);
+
   return recalcularP;
 }
 
-// function (cuarzo, feldespatoK, plagioclasa) {
-// const sumaQAP = cuarzo + feldespatoK + plagioclasa
-
-// }
-
 //Interactuando con HTML
-//
+function recalcularQAP() {
+  const inputCuarzo = document.getElementById("InputCuarzo");
+  const valueCuarzo = Number(inputCuarzo.value);
+  console.log(valueCuarzo);
+
+  const inputFeldespatoK = document.getElementById("InputFeldespatoK");
+  const valueFeldespatoK = Number(inputFeldespatoK.value);
+
+  const inputPlagioclasa = document.getElementById("InputPlagioclasa");
+  const valuePlagioclasa = Number(inputPlagioclasa.value);
+
+  const totalQAP = sumaQAP(valueCuarzo, valueFeldespatoK, valuePlagioclasa);
+
+  const resultadoCuarzo = recalcularQ(
+    valueCuarzo,
+    valueFeldespatoK,
+    valuePlagioclasa
+  );
+
+  const resultadoFeldespatoK = recalcularA(
+    valueCuarzo,
+    valueFeldespatoK,
+    valuePlagioclasa
+  );
+
+  const resultadoPlagioclasa = recalcularP(
+    valueCuarzo,
+    valueFeldespatoK,
+    valuePlagioclasa
+  );
+
+  const resultadoQ = document.getElementById("ResultadoQ");
+  resultadoQ.innerText = `Q = ${resultadoCuarzo}%`;
+
+  const resultadoA = document.getElementById("ResultadoA");
+  resultadoA.innerText = `A = ${resultadoFeldespatoK}%`;
+
+  const resultadoP = document.getElementById("ResultadoP");
+  resultadoP.innerText = `P = ${resultadoPlagioclasa}%`;
+}
