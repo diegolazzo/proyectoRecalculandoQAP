@@ -61,6 +61,32 @@ function recalcularP(cuarzo, feldespatoK, plagioclasa) {
   return recalcularP;
 }
 
+//Algoritmo para clasificar rocas
+function sumaAP(cuarzo, feldespatoK, plagioclasa) {
+  const sumaAP =
+    recalcularA(cuarzo, feldespatoK, plagioclasa) +
+    recalcularP(cuarzo, feldespatoK, plagioclasa);
+  return sumaAP;
+}
+
+function recalcularAA(cuarzo, feldespatoK, plagioclasa) {
+  let recalcularAA =
+    (recalcularA(cuarzo, feldespatoK, plagioclasa) * 100) /
+    sumaAP(cuarzo, feldespatoK, plagioclasa);
+  recalcularAA = Math.round(recalcularAA);
+
+  return recalcularAA;
+}
+
+function recalcularPP(cuarzo, feldespatoK, plagioclasa) {
+  let recalcularPP =
+    (recalcularP(cuarzo, feldespatoK, plagioclasa) * 100) /
+    sumaAP(cuarzo, feldespatoK, plagioclasa);
+  recalcularPP = Math.round(recalcularPP);
+
+  return recalcularPP;
+}
+
 //Interactuando con HTML
 function recalcularQAP() {
   const inputCuarzo = document.getElementById("InputCuarzo");
