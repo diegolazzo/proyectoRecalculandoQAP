@@ -10,6 +10,7 @@
   <body>
     <script src="./script.js"></script>
     <header>
+      <img src="" alt="" />
       <h1>Geo Toolbox | QAP</h1>
       <p>
         App para recalcular porcentaje de minerales observados y clasificar
@@ -18,31 +19,41 @@
     </header>
     <main>
       <section class="containerQAP">
-        <h2 class="title">% QAP</h2>
-        <p>Ingresa el porcentaje QAP observado en la muestra</p>
-        <form action="">
-          <label for="InputCuarzo">Cuarzo</label>
-          <input id="InputCuarzo" type="number" />
+        <div>
+          <h2 class="title">QAP</h2>
+          <p>Ingresa el porcentaje QAP observado en la muestra</p>
+        </div>
 
-          <label for="InputFeldespatoK">Feldespato K</label>
-          <input id="InputFeldespatoK" type="number" />
+        <form action="" class="containerInteraction">
+          <div>
+            <label for="InputCuarzo">Cuarzo</label>
+            <input id="InputCuarzo" type="number" />
 
-          <label for="InputPlagioclasa">Plagioclasa</label>
-          <input id="InputPlagioclasa" type="number" />
+            <label for="InputFeldespatoK">Feldespato K</label>
+            <input id="InputFeldespatoK" type="number" />
 
-          <button type="button" onclick="recalcularQAP()">
-            Recalcular QAP
-          </button>
+            <label for="InputPlagioclasa">Plagioclasa</label>
+            <input id="InputPlagioclasa" type="number" />
+          </div>
 
-          <p id="ResultadoQ"></p>
-          <p id="ResultadoA"></p>
-          <p id="ResultadoP"></p>
+          <div>
+            <button type="button" onclick="recalcularQAP()">
+              Recalcular QAP
+            </button>
+          </div>
 
-          <p class="disclaimer">
-            Disclaimer: "garbage in, garbage out". Si ingresas datos erróneos,
-            la clasificación de tu muestra también será errónea.
-          </p>
+          <div class="resultados">
+            <p>% QAP recalculado</p>
+            <p id="ResultadoQ"></p>
+            <p id="ResultadoA"></p>
+            <p id="ResultadoP"></p>
+          </div>
         </form>
+
+        <p class="disclaimer">
+          Disclaimer: "garbage in, garbage out". Si ingresas datos erróneos, la
+          clasificación de tu muestra también será errónea.
+        </p>
       </section>
     </main>
   </body>
