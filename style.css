@@ -59,16 +59,42 @@ form label {
 }
 
 form button {
-  height: 48px;
-  font-size: 1.6rem;
-  font-weight: bold;
-  padding: 18px 32px;
-  margin-top: 18px;
-  border: 0;
-  border-radius: 4px;
-  background-color: aliceblue;
-  color: rgb(90, 227, 181);
-  box-shadow: 0 18px 48px 35% rgb(181, 187, 192);
+  background: linear-gradient(-45deg, #3f00b5, #9f69fe, #18ab9c, #3f00b5);
+  background-size: 800% 400%;
+  padding: 1rem 2rem;
+  margin-top: 24px;
+  display: inline-block;
+  border: none;
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: 700;
+  color: white;
+  transition: all 0.5s ease-in-out;
+  animation: gradient 10s infinite cubic-bezier(0.62, 0.28, 0.23, 0.99) both;
+}
+
+button:hover {
+  animation: gradient 3s infinite;
+  transform: scale(1.05);
+}
+
+button:active {
+  animation: gradient 3s infinite;
+  transform: scale(0.8);
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 form input {
